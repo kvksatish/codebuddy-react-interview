@@ -1,0 +1,124 @@
+.post-list {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+  
+    /* For Large Screens */
+    grid-template-columns: repeat(3, 1fr);
+  
+    /* For Medium Screens */
+    
+  
+    /* For Small Screens */
+   
+  }
+ @media only screen and (max-width: 768px) {
+    .post-list{
+      grid-template-columns: repeat(2, 1fr);
+    }
+ }
+   @media only screen and (max-width: 480px) {
+    .post-list{
+      grid-template-columns: 1fr;
+    }
+}
+  .post {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .post-content {
+    padding: 1rem;
+  }
+  
+  .post-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  
+  .author-name {
+    font-weight: bold;
+  }
+  
+  .post-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-description {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 400px;
+    margin: 10px auto;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #4d90fe;
+    box-shadow: 0 0 0 2px rgba(77, 144, 254, 0.2);
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #4d90fe;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin: auto;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  button:not(:disabled):hover {
+    background-color: #357ae8;
+  }
+  
+  span {
+    color: red;
+    font-size: 14px;
+  }
+  
